@@ -6,7 +6,6 @@ class kerberos ( $krb5conf_location = $kerberos::params::krb5conf_location ,
     file { '/etc/krb5.conf':
       ensure  => present,
       source  => $krb5conf_location,
-#      require => Package[''],
       owner   => 'root',
       group   => 'root',
       mode    => '0644',
