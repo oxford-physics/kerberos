@@ -9,7 +9,8 @@ class kerberos ( $krb5conf_location = $kerberos::params::krb5conf_location ,
       owner   => 'root',
       group   => 'root',
       mode    => '0644',
-  }
-   root_cred { $authorized_creds : }
+    }
+    
+    kerberos::root_cred { $authorized_creds : }
 
 }
